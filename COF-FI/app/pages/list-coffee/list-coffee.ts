@@ -25,8 +25,9 @@ export class ListCoffeePage {
     let newCoffeeObject = {name : newCoffeName};
     this.items.push(newCoffeeObject);
   }
-  popUp(selectedPokemon){
-    alert(selectedPokemon.name + "เราเลือกคุณ");
+  onPop(){
+    this.navCtrl.pop();
   }
+  
 
 }
