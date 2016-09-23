@@ -12,7 +12,18 @@
 
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+    <ion-list inset>
+            <ion-item>
+                <ion-label fiexd>Coffee's Name</ion-label>
+                <ion-input type="text" [(ngModel)]="newCoffeName"></ion-input>
+            </ion-item>
+            <button block (click)="addNewCoffee(newCoffeName)">Add</button>
+    </ion-list>
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="popUp(item)">
+            <h2>{{item.name}}</h2>
+            <p> {{item.Type}}</p>
+        </ion-item>
+    </ion-list>
 </ion-content>
