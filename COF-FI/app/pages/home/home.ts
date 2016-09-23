@@ -9,7 +9,14 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
+  Caramel = 0;
   clickOk(){
     this.navCtrl.push(ListCoffeePage);
   }
+  plusCoffi(){
+this.Caramel += 1;
+  }
+  delCoffi(){
+  this.Caramel -= 1;
+}
 }
